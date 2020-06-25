@@ -25,7 +25,7 @@ SECRET_KEY = 'rvh_wm%&b1$lb696$2%m$u50e$5p^xdwbq66am!%rp70izmpw^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0', '127.0.0.1','172.18.0.2']
 
 
 # Application definition
@@ -93,15 +93,15 @@ WSGI_APPLICATION = 'tank_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         
-        # 'ENGINE': 'django.db.backends.postgresql',
-        # 'NAME': 'postgres',
-        # 'USER': 'postgres',
-        # 'PASSWORD': 'postgres',
-        # 'HOST': 'db',  # match to service in docker-compose
-        # 'PORT': 5423,
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'db',  # match to service in docker-compose
+        'PORT': 5432,
     }
 }
 
